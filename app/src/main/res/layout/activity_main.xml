@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde"
+            android:clickable="false"
+            android:fontFamily="@font/quicksand_bold"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="#FFFFFF"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBemVindo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/verde"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtBemVindo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Olá Usuário Novo!"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgConfig"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_settings_24" />
+
+            <ImageView
+                android:id="@+id/imgMail"
+                android:layout_width="35dp"
+                android:layout_height="33dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgConfig"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_mail_outline_24" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardClima"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardBemVindo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:id="@+id/imgFundoClima"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fundo_clima" />
+
+            <ImageView
+                android:id="@+id/imgTempoHome"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtClima"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ct" />
+
+            <TextView
+                android:id="@+id/txtPrevisao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Tempo"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgTempoHome"
+                app:layout_constraintStart_toEndOf="@+id/imgTempoHome"
+                app:layout_constraintTop_toTopOf="@+id/imgTempoHome" />
+
+            <TextView
+                android:id="@+id/txtClima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Clima"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgChuva"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="-20dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/txtClima"
+                app:layout_constraintStart_toEndOf="@+id/txtClima"
+                app:layout_constraintTop_toBottomOf="@+id/txtPrevisao"
+                app:srcCompat="@drawable/baseline_water_drop_24" />
+
+            <TextView
+                android:id="@+id/txtChuva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="10%"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/imgChuva"
+                app:layout_constraintStart_toEndOf="@+id/imgChuva"
+                app:layout_constraintTop_toTopOf="@+id/imgChuva" />
+
+            <ImageView
+                android:id="@+id/imgTempMax"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="-230dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtClima"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPrevisao"
+                app:srcCompat="@drawable/baseline_arrow_upward_24" />
+
+            <TextView
+                android:id="@+id/txtTempMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="000°"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgChuva"
+                app:layout_constraintStart_toEndOf="@+id/imgTempMax"
+                app:layout_constraintTop_toTopOf="@+id/imgChuva" />
+
+            <ImageView
+                android:id="@+id/imgTempMin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtClima"
+                app:layout_constraintStart_toEndOf="@+id/txtTempMax"
+                app:layout_constraintTop_toBottomOf="@+id/txtPrevisao"
+                app:srcCompat="@drawable/baseline_arrow_downward_24" />
+
+            <TextView
+                android:id="@+id/txtTempMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="000°"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgChuva"
+                app:layout_constraintStart_toEndOf="@+id/imgTempMin"
+                app:layout_constraintTop_toTopOf="@+id/imgChuva" />
+
+            <TextView
+                android:id="@+id/txtData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="00/00"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtTempMin"
+                app:layout_constraintTop_toBottomOf="@+id/txtTempMin" />
+
+            <ImageView
+                android:id="@+id/imgCaledario"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtData"
+                app:layout_constraintEnd_toStartOf="@+id/txtData"
+                app:layout_constraintTop_toTopOf="@+id/txtData"
+                app:srcCompat="@drawable/baseline_calendar_today_24" />
+
+            <TextView
+                android:id="@+id/txtCidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Cidade - UF"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/imgCaledario"
+                app:layout_constraintTop_toBottomOf="@+id/txtTempMin" />
+
+            <ImageView
+                android:id="@+id/imgPin"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtData"
+                app:layout_constraintEnd_toStartOf="@+id/txtCidade"
+                app:layout_constraintTop_toTopOf="@+id/txtData"
+                app:srcCompat="@drawable/baseline_location_on_24_amarelo" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imgFundoClima"
+                app:srcCompat="@drawable/baseline_touch_app_24" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDolar"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardClima">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:id="@+id/imgFundoDolar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fundo_dolar" />
+
+            <TextView
+                android:id="@+id/txtDolar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="0,00"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgFundoDolar"
+                app:layout_constraintEnd_toEndOf="@+id/imgFundoDolar"
+                app:layout_constraintStart_toStartOf="@+id/imgFundoDolar"
+                app:layout_constraintTop_toTopOf="@+id/imgFundoDolar" />
+
+            <TextView
+                android:id="@+id/txtDolarEsquerda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Dólar/USD"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imgFundoDolar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.516" />
+
+            <TextView
+                android:id="@+id/txtDolarDireita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Real/BR"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.516" />
+
+            <TextView
+                android:id="@+id/txtPrevisao5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="$"
+                android:textColor="@color/ferrugem"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtDolarDireita"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.516" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

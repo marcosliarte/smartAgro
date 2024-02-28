@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ferrugem">#A13818</color>
+    <color name="verde_fundo">#DDF0C8</color>
+    <color name="verde">#4C5F15</color>
+    <color name="verde_escuro">#34410D</color>
+    <color name="verde_input">#6b7a40</color>
+    <color name="transparente">#00000000</color>
+    <color name="amarelo">#FF9900</color>
+    <color name="green">#32a852</color>
+    <color name="blue">#051aff</color>
+    <color name="red">#ff0505</color>
+</resources>

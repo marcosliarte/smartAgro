@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "956666337438",
+    "project_id": "smartagro-cafe",
+    "storage_bucket": "smartagro-cafe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956666337438:android:4b9a45f7bc7a7511ac438f",
+        "android_client_info": {
+          "package_name": "br.com.smartagro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956666337438-gatlak3rsftrjmu19a8hol7dtfubqga5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApbJvFVlMspU51DkpKa8P7Y4d0f5css5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956666337438-gatlak3rsftrjmu19a8hol7dtfubqga5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.MeusDadosFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/editNome"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Nome completo"
+            android:inputType="textPersonName"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/verde_escuro"
+            android:textColorHint="@color/verde_escuro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editCelular"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Celular"
+            android:inputType="phone"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/verde_escuro"
+            android:textColorHint="@color/verde_escuro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editNome" />
+
+        <EditText
+            android:id="@+id/editCidade"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Cidade"
+            android:inputType="text"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/verde_escuro"
+            android:textColorHint="@color/verde_escuro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCelular" />
+
+
+        <ImageView
+            android:id="@+id/imgBuscarCidade"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="40dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/editCidade"
+            app:layout_constraintEnd_toEndOf="@+id/editCidade"
+            app:layout_constraintTop_toTopOf="@+id/editCidade"
+            app:layout_constraintVertical_bias="0.562"
+            app:srcCompat="@drawable/baseline_search_24" />
+
+        <Button
+            android:id="@+id/btnEditarSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Editar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCidade" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

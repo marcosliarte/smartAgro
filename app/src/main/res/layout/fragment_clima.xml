@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.11" />
+
+        <TextView
+            android:id="@+id/txtDia"
+            android:layout_width="174dp"
+            android:layout_height="103dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="DOM"
+            android:textAlignment="textStart"
+            android:textColor="@color/verde"
+            android:textSize="75dp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal1"
+            app:layout_constraintVertical_bias="0.506" />
+
+        <TextView
+            android:id="@+id/txtDiaMes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="06 Julho"
+            android:textColor="@color/verde"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtDia"
+            app:layout_constraintStart_toEndOf="@+id/txtDia"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal1"
+            app:layout_constraintVertical_bias="0.571" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <ImageView
+            android:id="@+id/imgTempo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblTempo"
+            app:srcCompat="@drawable/in" />
+
+        <TextView
+            android:id="@+id/lblTempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Tempo"
+            android:textColor="@color/verde_escuro"
+            app:layout_constraintBottom_toBottomOf="@+id/imgNuvem"
+            app:layout_constraintStart_toEndOf="@+id/imgNuvem"
+            app:layout_constraintTop_toTopOf="@+id/imgNuvem"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imgNuvem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/imgTempo"
+            app:layout_constraintTop_toBottomOf="@+id/txtDia"
+            app:srcCompat="@drawable/nuvem303640" />
+
+        <TextView
+            android:id="@+id/txtTempo"
+            android:layout_width="193dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="8dp"
+            android:autoText="true"
+            android:gravity="center_vertical"
+            android:text="Nublado com Poss. de Chuva a Tarde"
+            android:textColor="@color/verde"
+            app:layout_constraintBottom_toTopOf="@+id/lblUv"
+            app:layout_constraintStart_toStartOf="@+id/imgNuvem"
+            app:layout_constraintTop_toBottomOf="@+id/lblTempo" />
+
+        <ImageView
+            android:id="@+id/imgUV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="@+id/imgNuvem"
+            app:layout_constraintTop_toBottomOf="@+id/imgNuvem"
+            app:srcCompat="@drawable/uv303640" />
+
+        <TextView
+            android:id="@+id/lblUv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Radiação UV"
+            android:textColor="@color/verde_escuro"
+            app:layout_constraintBottom_toBottomOf="@+id/imgUV"
+            app:layout_constraintStart_toEndOf="@+id/imgUV"
+            app:layout_constraintTop_toTopOf="@+id/imgUV" />
+
+        <TextView
+            android:id="@+id/txtUV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Baixo (1.0)"
+            android:textColor="@color/verde"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/imgUV"
+            app:layout_constraintTop_toBottomOf="@+id/lblUv" />
+
+        <ImageView
+            android:id="@+id/imTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="@+id/imgUV"
+            app:layout_constraintTop_toBottomOf="@+id/imgUV"
+            app:srcCompat="@drawable/baseline_device_thermostat_24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:scrollbarSize="34dp"
+            app:layout_constraintGuide_percent="0.54" />
+
+        <TextView
+            android:id="@+id/txtProximosDias"
+            android:layout_width="166dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Próximos dias"
+            android:textAlignment="textStart"
+            android:textColor="@color/verde"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal3"
+            app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
+            app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal3"
+            app:layout_constraintVertical_bias="0.352" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="0dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/transparente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtProximosDias">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/divider0"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparente" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card0"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:background="@color/verde_fundo"
+                    app:cardBackgroundColor="@color/verde_fundo"
+                    app:cardCornerRadius="24dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgTempoCard_01"
+                            android:layout_width="38dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/sol_e_chuva" />
+
+                        <TextView
+                            android:id="@+id/txtMesCard_01"
+                            android:layout_width="44dp"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="Mai"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtDiaCard_01"
+                            app:layout_constraintStart_toEndOf="@+id/txtDiaCard_01" />
+
+                        <TextView
+                            android:id="@+id/txtDiaCard_01"
+                            android:layout_width="66dp"
+                            android:layout_height="57dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="30"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="48sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtTempoCard_01"
+                            android:layout_width="108dp"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="16dp"
+                            android:gravity="center_vertical"
+                            android:text="Nublado com Possibilidade de Chuva"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgNuvem_01"
+                            app:layout_constraintStart_toEndOf="@+id/imgNuvem_01"
+                            app:layout_constraintTop_toTopOf="@+id/imgNuvem_01" />
+
+                        <ImageView
+                            android:id="@+id/imgNuvem_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            app:layout_constraintStart_toStartOf="@+id/txtDiaCard_01"
+                            app:layout_constraintTop_toBottomOf="@+id/txtDiaCard_01"
+                            app:srcCompat="@drawable/nuvem22262b" />
+
+                        <ImageView
+                            android:id="@+id/imgUv_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintStart_toStartOf="@+id/imgNuvem_01"
+                            app:layout_constraintTop_toBottomOf="@+id/imgNuvem_01"
+                            app:srcCompat="@drawable/uv22262c" />
+
+                        <TextView
+                            android:id="@+id/txtUvCard_01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Baixo (5.0)"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgUv_01"
+                            app:layout_constraintStart_toEndOf="@+id/imgUv_01"
+                            app:layout_constraintTop_toTopOf="@+id/imgUv_01" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparente" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card1"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:background="@color/verde_fundo"
+                    app:cardBackgroundColor="@color/verde_fundo"
+                    app:cardCornerRadius="24dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgTempoCard_02"
+                            android:layout_width="38dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/sol_e_chuva" />
+
+                        <TextView
+                            android:id="@+id/txtMesCard_02"
+                            android:layout_width="44dp"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="Mai"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtDiaCard_02"
+                            app:layout_constraintStart_toEndOf="@+id/txtDiaCard_02" />
+
+                        <TextView
+                            android:id="@+id/txtDiaCard_02"
+                            android:layout_width="66dp"
+                            android:layout_height="57dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="30"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="48sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtTempoCard_02"
+                            android:layout_width="108dp"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="16dp"
+                            android:gravity="center_vertical"
+                            android:text="Nublado com Possibilidade de Chuva"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgNuvem_02"
+                            app:layout_constraintStart_toEndOf="@+id/imgNuvem_02"
+                            app:layout_constraintTop_toTopOf="@+id/imgNuvem_02" />
+
+                        <ImageView
+                            android:id="@+id/imgNuvem_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            app:layout_constraintStart_toStartOf="@+id/txtDiaCard_02"
+                            app:layout_constraintTop_toBottomOf="@+id/txtDiaCard_02"
+                            app:srcCompat="@drawable/nuvem22262b" />
+
+                        <ImageView
+                            android:id="@+id/imgUv_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintStart_toStartOf="@+id/imgNuvem_02"
+                            app:layout_constraintTop_toBottomOf="@+id/imgNuvem_02"
+                            app:srcCompat="@drawable/uv22262c" />
+
+                        <TextView
+                            android:id="@+id/txtUvCard_02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Baixo (5.0)"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgUv_02"
+                            app:layout_constraintStart_toEndOf="@+id/imgUv_02"
+                            app:layout_constraintTop_toTopOf="@+id/imgUv_02" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparente" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card2"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:background="@color/verde_fundo"
+                    app:cardBackgroundColor="@color/verde_fundo"
+                    app:cardCornerRadius="24dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgTempoCard_03"
+                            android:layout_width="38dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/sol_e_chuva" />
+
+                        <TextView
+                            android:id="@+id/txtMesCard_03"
+                            android:layout_width="44dp"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="Mai"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtDiaCard_03"
+                            app:layout_constraintStart_toEndOf="@+id/txtDiaCard_03" />
+
+                        <TextView
+                            android:id="@+id/txtDiaCard_03"
+                            android:layout_width="66dp"
+                            android:layout_height="57dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="30"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="48sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtTempoCard_03"
+                            android:layout_width="108dp"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="16dp"
+                            android:gravity="center_vertical"
+                            android:text="Nublado com Possibilidade de Chuva"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgNuvem_03"
+                            app:layout_constraintStart_toEndOf="@+id/imgNuvem_03"
+                            app:layout_constraintTop_toTopOf="@+id/imgNuvem_03" />
+
+                        <ImageView
+                            android:id="@+id/imgNuvem_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            app:layout_constraintStart_toStartOf="@+id/txtDiaCard_03"
+                            app:layout_constraintTop_toBottomOf="@+id/txtDiaCard_03"
+                            app:srcCompat="@drawable/nuvem22262b" />
+
+                        <ImageView
+                            android:id="@+id/imgUv_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintStart_toStartOf="@+id/imgNuvem_03"
+                            app:layout_constraintTop_toBottomOf="@+id/imgNuvem_03"
+                            app:srcCompat="@drawable/uv22262c" />
+
+                        <TextView
+                            android:id="@+id/txtUvCard_03"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Baixo (5.0)"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgUv_03"
+                            app:layout_constraintStart_toEndOf="@+id/imgUv_03"
+                            app:layout_constraintTop_toTopOf="@+id/imgUv_03" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparente" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card3"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:background="@color/verde_fundo"
+                    app:cardBackgroundColor="@color/verde_fundo"
+                    app:cardCornerRadius="24dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgTempoCard_04"
+                            android:layout_width="38dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/sol_e_chuva" />
+
+                        <TextView
+                            android:id="@+id/txtMesCard_04"
+                            android:layout_width="44dp"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="Mai"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtDiaCard_04"
+                            app:layout_constraintStart_toEndOf="@+id/txtDiaCard_04" />
+
+                        <TextView
+                            android:id="@+id/txtDiaCard_04"
+                            android:layout_width="66dp"
+                            android:layout_height="57dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="30"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="48sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtTempoCard_04"
+                            android:layout_width="108dp"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="16dp"
+                            android:gravity="center_vertical"
+                            android:text="Nublado com Possibilidade de Chuva"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgNuvem_04"
+                            app:layout_constraintStart_toEndOf="@+id/imgNuvem_04"
+                            app:layout_constraintTop_toTopOf="@+id/imgNuvem_04" />
+
+                        <ImageView
+                            android:id="@+id/imgNuvem_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            app:layout_constraintStart_toStartOf="@+id/txtDiaCard_04"
+                            app:layout_constraintTop_toBottomOf="@+id/txtDiaCard_04"
+                            app:srcCompat="@drawable/nuvem22262b" />
+
+                        <ImageView
+                            android:id="@+id/imgUv_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintStart_toStartOf="@+id/imgNuvem_04"
+                            app:layout_constraintTop_toBottomOf="@+id/imgNuvem_04"
+                            app:srcCompat="@drawable/uv22262c" />
+
+                        <TextView
+                            android:id="@+id/txtUvCard_04"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Baixo (5.0)"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgUv_04"
+                            app:layout_constraintStart_toEndOf="@+id/imgUv_04"
+                            app:layout_constraintTop_toTopOf="@+id/imgUv_04" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparente" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card4"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:background="@color/verde_fundo"
+                    app:cardBackgroundColor="@color/verde_fundo"
+                    app:cardCornerRadius="24dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgTempoCard_05"
+                            android:layout_width="38dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/sol_e_chuva" />
+
+                        <TextView
+                            android:id="@+id/txtMesCard_05"
+                            android:layout_width="44dp"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="Mai"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtDiaCard_05"
+                            app:layout_constraintStart_toEndOf="@+id/txtDiaCard_05" />
+
+                        <TextView
+                            android:id="@+id/txtDiaCard_05"
+                            android:layout_width="66dp"
+                            android:layout_height="57dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="30"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="48sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtTempoCard_05"
+                            android:layout_width="108dp"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="16dp"
+                            android:gravity="center_vertical"
+                            android:text="Nublado com Possibilidade de Chuva"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgNuvem_05"
+                            app:layout_constraintStart_toEndOf="@+id/imgNuvem_05"
+                            app:layout_constraintTop_toTopOf="@+id/imgNuvem_05" />
+
+                        <ImageView
+                            android:id="@+id/imgNuvem_05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            app:layout_constraintStart_toStartOf="@+id/txtDiaCard_05"
+                            app:layout_constraintTop_toBottomOf="@+id/txtDiaCard_05"
+                            app:srcCompat="@drawable/nuvem22262b" />
+
+                        <ImageView
+                            android:id="@+id/imgUv_05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintStart_toStartOf="@+id/imgNuvem_05"
+                            app:layout_constraintTop_toBottomOf="@+id/imgNuvem_05"
+                            app:srcCompat="@drawable/uv22262c" />
+
+                        <TextView
+                            android:id="@+id/txtUvCard_05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Baixo (5.0)"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgUv_05"
+                            app:layout_constraintStart_toEndOf="@+id/imgUv_05"
+                            app:layout_constraintTop_toTopOf="@+id/imgUv_05" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparente" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card5"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:background="@color/verde_fundo"
+                    app:cardBackgroundColor="@color/verde_fundo"
+                    app:cardCornerRadius="24dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgTempoCard_06"
+                            android:layout_width="38dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/sol_e_chuva" />
+
+                        <TextView
+                            android:id="@+id/txtMesCard_06"
+                            android:layout_width="44dp"
+                            android:layout_height="23dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="Mai"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtDiaCard_06"
+                            app:layout_constraintStart_toEndOf="@+id/txtDiaCard_06" />
+
+                        <TextView
+                            android:id="@+id/txtDiaCard_06"
+                            android:layout_width="66dp"
+                            android:layout_height="57dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="30"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/verde_escuro"
+                            android:textSize="48sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtTempoCard_06"
+                            android:layout_width="108dp"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="16dp"
+                            android:gravity="center_vertical"
+                            android:text="Nublado com Possibilidade de Chuva"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgNuvem_06"
+                            app:layout_constraintStart_toEndOf="@+id/imgNuvem_06"
+                            app:layout_constraintTop_toTopOf="@+id/imgNuvem_06" />
+
+                        <ImageView
+                            android:id="@+id/imgNuvem_06"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="32dp"
+                            app:layout_constraintStart_toStartOf="@+id/txtDiaCard_06"
+                            app:layout_constraintTop_toBottomOf="@+id/txtDiaCard_06"
+                            app:srcCompat="@drawable/nuvem22262b" />
+
+                        <ImageView
+                            android:id="@+id/imgUv_06"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintStart_toStartOf="@+id/imgNuvem_06"
+                            app:layout_constraintTop_toBottomOf="@+id/imgNuvem_06"
+                            app:srcCompat="@drawable/uv22262c" />
+
+                        <TextView
+                            android:id="@+id/txtUvCard_06"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Baixo (5.0)"
+                            android:textColor="@color/verde_escuro"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgUv_06"
+                            app:layout_constraintStart_toEndOf="@+id/imgUv_06"
+                            app:layout_constraintTop_toTopOf="@+id/imgUv_06" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparente" />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/lblCidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Cidade - UF"
+            android:textColor="@color/verde"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnCompartilhar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblCidade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblCidade"
+            app:srcCompat="@drawable/baseline_share_24" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lblCidade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblCidade"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/txtMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="00 C°"
+            android:textColor="@color/verde"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.461" />
+
+        <TextView
+            android:id="@+id/txtMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="00 C°"
+            android:textColor="@color/verde"
+            android:textColorHighlight="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="0.461" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtMax"
+            app:layout_constraintStart_toEndOf="@+id/txtMax"
+            app:layout_constraintTop_toTopOf="@+id/txtMax"
+            app:layout_constraintVertical_bias="0.461"
+            app:srcCompat="@drawable/baseline_arrow_downward_24" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/imTemp"
+            app:layout_constraintTop_toBottomOf="@+id/imTemp"
+            app:srcCompat="@drawable/baseline_arrow_upward_24" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Temperatura"
+            android:textColor="@color/verde_escuro"
+            app:layout_constraintBottom_toBottomOf="@+id/imTemp"
+            app:layout_constraintStart_toEndOf="@+id/imTemp"
+            app:layout_constraintTop_toTopOf="@+id/imTemp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="@+id/imTemp"
+            app:layout_constraintTop_toBottomOf="@+id/imTemp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

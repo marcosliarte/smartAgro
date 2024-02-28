@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SmartAgroApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/ferrugem</item>
+        <item name="colorSecondaryContainer">@color/ferrugem</item>
+    </style>
+
+
+    <style name="Theme.SmartAgroApp" parent="Base.Theme.SmartAgroApp" />
+</resources>
