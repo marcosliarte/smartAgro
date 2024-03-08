@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome da fazenda" />
+
+    <EditText
+        android:id="@+id/editTextTamanho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tamanho em hectares"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextLocalizacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Localização" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFazendas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

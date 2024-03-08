@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <EditText
+        android:id="@+id/editTextArea"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:hint="Área (m²)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextTeorNutrientes"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextArea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:hint="Teor de Nutrientes (kg/m²)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextEficienciaAdubo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTeorNutrientes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:hint="Eficiência do Adubo (%)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextTeorNutrientesAdubo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEficienciaAdubo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:hint="Teor de Nutrientes do Adubo (%)"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTeorNutrientesAdubo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Calcular" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalcular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text=""
+        android:textSize="18sp" />
+
+</RelativeLayout>
+

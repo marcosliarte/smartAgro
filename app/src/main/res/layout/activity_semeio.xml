@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <EditText
+        android:id="@+id/editTextArea"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:hint="Área (m²)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextPopulacao"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextArea"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:hint="População desejada por m²"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextGerminacao"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPopulacao"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:hint="Germinação (%)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextPureza"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextGerminacao"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:hint="Pureza (%)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextPMG"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPureza"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:hint="PMG (g)"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPMG"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Calcular" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalcular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text=""
+        android:textSize="18sp" />
+
+</RelativeLayout>

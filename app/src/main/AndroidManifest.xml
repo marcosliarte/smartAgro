@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
@@ -31,10 +32,61 @@
             android:name=".LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activitysfazendas.MainActivityFazendas"
+            android:exported="true">
+            <!-- Adicione quaisquer outros atributos necessários aqui -->
+        </activity>
+        <activity
+            android:name=".activitysfazendas.FazendaDetailsActivity"
+            android:exported="true">
+            <!-- Adicione quaisquer outros atributos necessários aqui -->
+        </activity>
+        <activity
+            android:name=".bioinsumos.activitysbioinsumos.MainActivityBioinsumos"
+            android:exported="true">
+            <!-- Adicione quaisquer outros atributos necessários aqui -->
+        </activity>
+        <activity
+            android:name=".bioinsumos.activitysbioinsumos.Biologicos"
+            android:exported="true">
+            <!-- Adicione quaisquer outros atributos necessários aqui -->
+        </activity>
+        <activity
+            android:name=".bioinsumos.activitysbioinsumos.Inoculantes"
+            android:exported="true">
+            <!-- Adicione quaisquer outros atributos necessários aqui -->
+        </activity>
+        <activity
+            android:name=".AdubacaoActivity"
+            android:exported="true">
+            <!-- Adicione quaisquer outros atributos necessários aqui -->
+        </activity>
+        <activity
+            android:name=".CalculoPulverizadorActivity"
+            android:exported="true">
+            <!-- Adicione quaisquer outros atributos necessários aqui -->
+        </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:exported="true">
+            <!-- Adicione quaisquer outros atributos necessários aqui -->
+        </activity>
+        <activity
+            android:name=".SemeioActivity"
+            android:exported="true">
+            <!-- Adicione quaisquer outros atributos necessários aqui -->
+        </activity>
+
+
+
+
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+
     </application>
 
 </manifest>

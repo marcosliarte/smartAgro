@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/roxo_fundo_card"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/roxo_fundo_card2"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/registro_produto_textview" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko"
+                android:text="Registro produto"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/registro_produto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="149dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko"
+                android:text="registro_produto"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/amiko"
+                android:text="CNPJ:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cnpj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:fontFamily="@font/amiko"
+                android:layout_marginTop="35dp"
+                android:text="cnpj"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="135dp"
+                android:layout_marginTop="65dp"
+                android:fontFamily="@font/amiko"
+                android:text="Razão social"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="82dp"
+                app:cardBackgroundColor="@color/fundo_classes"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+
+                <TextView
+                    android:id="@+id/razaoSocial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/amiko"
+                    android:text="razaoSocial"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="150dp"
+                android:fontFamily="@font/amiko"
+                android:text="UF:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/uf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="150dp"
+                android:fontFamily="@font/amiko"
+                android:text="uf"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="175dp"
+                android:fontFamily="@font/amiko"
+                android:text="Atividades:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/atividade"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginStart="102dp"
+                android:layout_marginTop="175dp"
+                android:fontFamily="@font/amiko"
+                android:text="atividade"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="200dp"
+                android:fontFamily="@font/amiko"
+                android:text="Tipo Fertilizante:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tipoFertilizante"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="200dp"
+                android:fontFamily="@font/amiko"
+                android:text="tipoFertilizante"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="225dp"
+                android:fontFamily="@font/amiko"
+                android:text="Especie:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/especie"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="225dp"
+                android:text="especie"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="250dp"
+                android:fontFamily="@font/amiko"
+                android:text="Data Registro:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dataRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="250dp"
+                android:text="dataRegistro"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="275dp"
+                android:fontFamily="@font/amiko"
+                android:text="Garantia:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/garantia"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginStart="86dp"
+                android:layout_marginTop="275dp"
+                android:text="Garantia"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/amiko"
+                android:text="Natureza Fisica:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/naturezaFisica"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="300dp"
+                android:text="registro_produto"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="350dp"
+            android:fontFamily="@font/amiko"
+            android:text="Cultura"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="370dp"
+            app:cardBackgroundColor="@color/roxo_fundo_card2"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/cultura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="cultura"
+                android:textColor="@color/text_cor"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="350dp"
+            android:fontFamily="@font/amiko"
+            android:text="Nome Cientifico"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="370dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/roxo_fundo_card2"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/nomeCientifico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="nomeCientifico"
+                android:textColor="@color/text_cor"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

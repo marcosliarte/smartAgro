@@ -10,6 +10,18 @@
     <color name="transparente">#00000000</color>
     <color name="amarelo">#FF9900</color>
     <color name="green">#32a852</color>
-    <color name="blue">#051aff</color>
+    <color name="blue">#2196F3</color>
+    <color name="light_blue">#03A9F4</color>
+    <color name="dark_blue">#0D47A1</color>
     <color name="red">#ff0505</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="roxo_fundo_card">#558B2F</color>
+    <color name="verde_classes">#DCEDC8</color>
+    <color name="roxo_fundo_card2">#C8E6C9</color>
+    <color name="verde_view">#9CCC65</color>
+    <color name="text_cor">#4A4458</color>
+    <color name="fundo_classes">#DCEDC8</color>
+    <color name="view">#21005D</color>
+
 </resources>

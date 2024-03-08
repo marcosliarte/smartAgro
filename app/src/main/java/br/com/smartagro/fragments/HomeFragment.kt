@@ -1,6 +1,4 @@
-package br.com.smartagro.fragments
-
-import ClimaFragment
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBindings
+import br.com.smartagro.MenuActivity
 import br.com.smartagro.clima.Conexao
 import br.com.smartagro.clima.ConsumirXML
 import br.com.smartagro.clima.Previsao
@@ -18,6 +17,8 @@ import br.com.smartagro.PrincipalActivity
 import br.com.smartagro.R
 import br.com.smartagro.clima.SiglaDescricao
 import br.com.smartagro.databinding.FragmentHomeBinding
+import br.com.smartagro.activitysfazendas.MainActivityFazendas
+import br.com.smartagro.bioinsumos.activitysbioinsumos.MainActivityBioinsumos
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -41,11 +42,25 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
 
         val nome = extrairPrimeiroNome(FirebaseAuth.getInstance().currentUser?.displayName)
         binding.txtBemVindo.text = "Olá, $nome!"
+
+        // Adicionar OnClickListener ao CardView "Fazendas e Talhões"
+        binding.cardFazendasETalhoes.setOnClickListener {
+            val intent = Intent(activity, MainActivityFazendas::class.java)
+            startActivity(intent)
+        }
+        binding.cardBioinsumos.setOnClickListener {
+            val intent = Intent(activity, MainActivityBioinsumos::class.java)
+            startActivity(intent)
+        }
+        binding.cardFerramentasUteis.setOnClickListener {
+            val intent = Intent(activity, MenuActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.cardClima.setOnClickListener {
             val climaFragment = ClimaFragment()
@@ -185,6 +200,4 @@ class HomeFragment : Fragment() {
                 Log.e("FirestoreError", "Erro ao buscar preço do dólar: $exception")
             }
     }
-
-
 }

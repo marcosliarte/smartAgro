@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".PulverizacaoActivity">
+
+    <EditText
+        android:id="@+id/editTextLargura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Largura (m)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextComprimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLargura"
+        android:layout_margin="16dp"
+        android:hint="Comprimento (m)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextComprimento"
+        android:layout_margin="16dp"
+        android:hint="Altura (m)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextDensidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAltura"
+        android:layout_margin="16dp"
+        android:hint="Densidade (litros/m²)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editTextEficienciaPulverizador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDensidade"
+        android:layout_margin="16dp"
+        android:hint="Eficiência do Pulverizador (%)"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEficienciaPulverizador"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Calcular" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalcular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
