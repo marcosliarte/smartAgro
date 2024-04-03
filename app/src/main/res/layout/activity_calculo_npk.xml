@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white_egg">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular Plano de Adubação"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Spinner para selecionar a cultura -->
+    <Spinner
+        android:id="@+id/spinnerCultura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_rounded_bg"
+        android:padding="12dp"
+        android:spinnerMode="dropdown"
+        android:textColor="@color/verde_escuro"
+        android:textColorHint="@color/verde_escuro"/>
+
+    <!-- EditTexts para entrada de nutrientes -->
+    <EditText
+        android:id="@+id/editTextNitrogenio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Nitrogênio (kg/ha)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edittext_rounded_bg"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/editTextFosforo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Fósforo (kg/ha)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/edittext_rounded_bg"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/editTextPotassio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Potássio (kg/ha)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@drawable/edittext_rounded_bg"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"/>
+
+    <!-- Botões -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCalcularIntervalo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calcular Intervalo"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/green"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/btnExcluirPlano"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Limpar Campos"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/red"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <!-- TextViews para exibir as datas de adubação -->
+    <TextView
+        android:id="@+id/textViewDataAdubacao1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewDataAdubacao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewDataAdubacao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewDataAdubacao4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+
+</LinearLayout>
+

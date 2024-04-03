@@ -1,6 +1,7 @@
 import android.content.ContentValues
 import android.content.Context
 import android.util.Log
+import br.com.smartagro.activitysfazendas.DatabaseHelper
 
 class FazendaDAO(context: Context) {
     private val dbHelper = DatabaseHelper(context)

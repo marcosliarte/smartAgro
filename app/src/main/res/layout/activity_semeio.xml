@@ -60,7 +60,8 @@
         android:layout_below="@id/editTextPMG"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:text="Calcular" />
+        android:text="Calcular"
+        android:backgroundTint="@color/green"/>
 
     <TextView
         android:id="@+id/textViewResultado"

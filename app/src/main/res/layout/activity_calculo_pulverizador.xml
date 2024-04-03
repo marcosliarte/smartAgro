@@ -4,52 +4,107 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".PulverizacaoActivity">
+    tools:context=".funcionalidades.CalculoPulverizadorActivity">
 
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Calcular Volume de Pulverização"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Entrada de dados -->
     <EditText
         android:id="@+id/editTextLargura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
         android:hint="Largura (m)"
-        android:inputType="numberDecimal" />
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edittext_rounded_bg"
+        android:inputType="numberDecimal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
 
     <EditText
         android:id="@+id/editTextComprimento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextLargura"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:hint="Comprimento (m)"
-        android:inputType="numberDecimal" />
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edittext_rounded_bg"
+        android:inputType="numberDecimal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
 
     <EditText
         android:id="@+id/editTextAltura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextComprimento"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:hint="Altura (m)"
-        android:inputType="numberDecimal" />
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edittext_rounded_bg"
+        android:inputType="numberDecimal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
 
     <EditText
         android:id="@+id/editTextDensidade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextAltura"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:hint="Densidade (litros/m²)"
-        android:inputType="numberDecimal" />
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edittext_rounded_bg"
+        android:inputType="numberDecimal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
 
     <EditText
         android:id="@+id/editTextEficienciaPulverizador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextDensidade"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:hint="Eficiência do Pulverizador (%)"
-        android:inputType="numberDecimal" />
+        android:textColorHint="@color/gray"
+        android:background="@drawable/edittext_rounded_bg"
+        android:inputType="numberDecimal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
 
+    <!-- Botão de cálculo -->
     <Button
         android:id="@+id/buttonCalcular"
         android:layout_width="wrap_content"
@@ -57,8 +112,16 @@
         android:layout_below="@id/editTextEficienciaPulverizador"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:text="Calcular" />
+        android:text="Calcular"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/green"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="center"/>
 
+    <!-- Resultado -->
     <TextView
         android:id="@+id/textViewResultado"
         android:layout_width="wrap_content"
@@ -67,6 +130,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/black" />
 
 </RelativeLayout>

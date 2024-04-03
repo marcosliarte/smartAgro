@@ -1,10 +1,11 @@
-package br.com.smartagro
+package br.com.smartagro.funcionalidades
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import br.com.smartagro.R
 
 class CalculoPulverizadorActivity : AppCompatActivity() {
 

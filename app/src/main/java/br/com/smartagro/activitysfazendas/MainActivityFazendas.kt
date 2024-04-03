@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.smartagro.R
 
-class MainActivityFazendas : AppCompatActivity() {
+class MainActivityFazendas : AppCompatActivity(), FazendaAdapter.FazendaAdapterListener {
 
     private lateinit var editTextNome: EditText
     private lateinit var editTextTamanho: EditText
@@ -25,7 +25,7 @@ class MainActivityFazendas : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_fazendas_talhoes)
+        setContentView(R.layout.activity_main_fazenda)
 
         editTextNome = findViewById(R.id.editTextNome)
         editTextTamanho = findViewById(R.id.editTextTamanho)
@@ -66,19 +66,22 @@ class MainActivityFazendas : AppCompatActivity() {
 
     private fun atualizarListaFazendas() {
         val fazendas = fazendaDAO.buscarFazendas()
-        rvFazendas.adapter = FazendaAdapter(fazendas, object : FazendaAdapter.FazendaAdapterListener {
-            override fun onEditarClick(position: Int) {
-                editarFazenda(fazendas[position])
-            }
+        rvFazendas.adapter = FazendaAdapter(fazendas, this)
+    }
 
-            override fun onExcluirClick(position: Int) {
-                deletarFazenda(fazendas[position])
-            }
+    override fun onEditarClick(position: Int) {
+        val fazenda = fazendaDAO.buscarFazendas()[position]
+        editarFazenda(fazenda)
+    }
 
-            override fun onVisualizarClick(position: Int) {
-                visualizarFazenda(fazendas[position])
-            }
-        })
+    override fun onVisualizarClick(position: Int) {
+        val fazenda = fazendaDAO.buscarFazendas()[position]
+        abrirDetalhesFazenda(fazenda.nome)
+    }
+
+    override fun onExcluirClick(position: Int) {
+        val fazenda = fazendaDAO.buscarFazendas()[position]
+        deletarFazenda(fazenda)
     }
 
     private fun editarFazenda(fazenda: Fazenda) {
@@ -93,18 +96,17 @@ class MainActivityFazendas : AppCompatActivity() {
         atualizarListaFazendas()
     }
 
-    private fun visualizarFazenda(fazenda: Fazenda) {
-        val intent = Intent(this, FazendaDetailsActivity::class.java)
-        // Certifique-se de que a classe Fazenda implementa Serializable
-        intent.putExtra("FAZENDA", fazenda)
-        startActivity(intent)
-    }
-
-
     private fun limparCampos() {
         editTextNome.setText("")
         editTextTamanho.setText("")
         editTextLocalizacao.setText("")
         fazendaAtual = null
+    }
+
+    private fun abrirDetalhesFazenda(nomeFazenda: String) {
+        val intent = Intent(this, DetalhesFazendaActivity::class.java).apply {
+            putExtra("NOME_FAZENDA", nomeFazenda)
+        }
+        startActivity(intent)
     }
 }

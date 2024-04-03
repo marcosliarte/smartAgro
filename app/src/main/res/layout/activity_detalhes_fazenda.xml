@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white_egg">
+
+    <!-- TextView para exibir o nome da fazenda -->
+    <TextView
+        android:id="@+id/textViewNomeFazenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/verde_escuro" />
+
+    <!-- TextView para exibir "Plano de Adubação" -->
+    <TextView
+        android:id="@+id/textViewPlanoAdubacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plano de Adubação"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewNomeFazenda"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/verde_escuro" />
+
+    <!-- RecyclerView para exibir os planos de adubação -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAdubacoes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/textViewPlanoAdubacao"
+        android:layout_above="@id/btnAbrirNovaTela"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_rounded_bg"
+        android:padding="8dp"
+        android:text="@color/black"/>
+
+    <!-- Botão padrão -->
+    <Button
+        android:id="@+id/btnAbrirNovaTela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criar plano"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/blue_blue"
+        android:textColor="@android:color/white"
+        android:padding="12dp" />
+
+</RelativeLayout>
+

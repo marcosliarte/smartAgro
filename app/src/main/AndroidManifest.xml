@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="br.com.smartagro">
 
-    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -14,78 +22,94 @@
         android:theme="@style/Theme.SmartAgroApp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
             android:name=".PrincipalActivity"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".CadastroActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
         <activity
             android:name=".LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
         <activity
             android:name=".activitysfazendas.MainActivityFazendas"
             android:exported="true">
             <!-- Adicione quaisquer outros atributos necessários aqui -->
         </activity>
+
         <activity
-            android:name=".activitysfazendas.FazendaDetailsActivity"
+            android:name=".activitysfazendas.DetalhesFazendaActivity"
             android:exported="true">
             <!-- Adicione quaisquer outros atributos necessários aqui -->
         </activity>
+
         <activity
             android:name=".bioinsumos.activitysbioinsumos.MainActivityBioinsumos"
             android:exported="true">
             <!-- Adicione quaisquer outros atributos necessários aqui -->
         </activity>
+
         <activity
             android:name=".bioinsumos.activitysbioinsumos.Biologicos"
             android:exported="true">
             <!-- Adicione quaisquer outros atributos necessários aqui -->
         </activity>
+
         <activity
             android:name=".bioinsumos.activitysbioinsumos.Inoculantes"
             android:exported="true">
             <!-- Adicione quaisquer outros atributos necessários aqui -->
         </activity>
+
         <activity
             android:name=".AdubacaoActivity"
             android:exported="true">
             <!-- Adicione quaisquer outros atributos necessários aqui -->
         </activity>
+
         <activity
-            android:name=".CalculoPulverizadorActivity"
+            android:name=".funcionalidades.CalculoPulverizadorActivity"
             android:exported="true">
             <!-- Adicione quaisquer outros atributos necessários aqui -->
         </activity>
+
         <activity
             android:name=".MenuActivity"
             android:exported="true">
             <!-- Adicione quaisquer outros atributos necessários aqui -->
         </activity>
+
         <activity
             android:name=".SemeioActivity"
             android:exported="true">
             <!-- Adicione quaisquer outros atributos necessários aqui -->
         </activity>
 
-
-
+        <activity
+            android:name=".activitysfazendas.CalculoNPK"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
 
     </application>
 

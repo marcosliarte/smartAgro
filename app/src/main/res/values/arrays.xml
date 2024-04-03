@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="culturas">
+        <item>Abacate</item>
+        <item>Abobrinha</item>
+        <item>Bananeira</item>
+        <item>Batata-Doce</item>
+        <item>Berinjela</item>
+        <item>Cacauzeiro</item>
+        <item>Cajueiro</item>
+        <item>Carambola</item>
+        <item>Coco</item>
+        <item>Couve-Flor</item>
+        <item>Feijão-De-Corda</item>
+        <item>Goiaba</item>
+        <item>Graviola</item>
+        <item>Mamão</item>
+        <item>Mandioquinha</item>
+        <item>Maracujá</item>
+        <item>Melancia</item>
+        <item>Melão</item>
+        <item>Pepino</item>
+        <item>Pimentão</item>
+        <item>Salsa</item>
+        <item>Salsão</item>
+        <item>Alface</item>
+        <item>Alho</item>
+        <item>Cebola</item>
+        <item>Cenoura</item>
+        <item>Feijão</item>
+        <item>Açaí</item>
+    </string-array>
+</resources>

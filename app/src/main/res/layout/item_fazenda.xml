@@ -1,46 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp">
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/textViewNomeFazenda"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Nome da Fazenda" />
+        android:text="Nome da Fazenda"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/textViewArea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="100 ha"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
         android:layout_marginStart="8dp"
-        android:text="100 ha" />
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/textViewLocalizacaoFazenda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Localização"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
         android:layout_marginStart="8dp"
-        android:text="Localização" />
+        android:layout_marginBottom="8dp" />
 
-    <Button
-        android:id="@+id/btnEditarFazenda"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Editar" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnVisualizarFazenda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Visualizar" />
-    <Button
-        android:id="@+id/btnDeletarFazenda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Deletar" />
+        <Button
+            android:id="@+id/btnEditarFazenda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/blue"
+            android:text="Editar"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:radius="16dp" />
+
+        <Button
+            android:id="@+id/btnVisualizarFazenda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/green"
+            android:text="Gerenciar planos"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:radius="16dp" />
+
+        <Button
+            android:id="@+id/btnDeletarFazenda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/red"
+            android:text="Deletar"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:radius="16dp" />
+
+    </LinearLayout>
 
 </LinearLayout>

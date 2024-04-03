@@ -26,7 +26,8 @@
         android:text="Biologicos
 "
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:backgroundTint="@color/green"/>
 
     <Button
         android:id="@+id/buttonInoculantes"
@@ -37,7 +38,8 @@
         android:onClick="buttonInoculantes"
         android:text="Inoculantes"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:backgroundTint="@color/green"/>
 
     <ImageView
         android:id="@+id/imageView"

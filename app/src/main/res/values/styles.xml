@@ -1,0 +1,26 @@
+<resources>
+    <!-- Estilo base para Application -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Estilo para TextViews de Títulos -->
+    <style name="TituloFazendaStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Estilo para TextViews de Subtítulos -->
+    <style name="SubtituloStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Estilo para Buttons -->
+    <style name="BotaoEstilo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>
